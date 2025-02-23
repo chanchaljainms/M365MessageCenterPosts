@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2022/09/ProvisioningSchema">
+  <pnp:Preferences Generator="PnP.Framework, Version=1.11.2.0, Culture=neutral, PublicKeyToken=0d501f89f11b748c" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-F2AF76F2C6AB462E895EA02998F545E3">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-F2AF76F2C6AB462E895EA02998F545E3" Version="1" BaseSiteTemplate="STS#3" Scope="RootSite">
+      <pnp:Lists>
+        <pnp:ListInstance Title="M365MCPosts" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/M365MCPosts" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false" ListExperience="NewExperience" DefaultDisplayFormUrl="{site}/Lists/M365MCPosts/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/M365MCPosts/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/M365MCPosts/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{BC85F4BA-6848-4827-8DC6-F887AAC4C559}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/M365MCPosts/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ColumnWidth>
+                <FieldRef Name="Title" width="317" />
+                <FieldRef Name="ID" width="90" />
+                <FieldRef Name="Action Required By DateTime" width="231" />
+                <FieldRef Name="Body" width="109" />
+                <FieldRef Name="Last Modified DateTime" width="174" />
+                <FieldRef Name="body" width="169" />
+                <FieldRef Name="details" width="207" />
+                <FieldRef Name="Summary" width="365" />
+                <FieldRef Name="MC ID" width="90" />
+                <FieldRef Name="Platforms" width="90" />
+                <FieldRef Name="RoadMapIds" width="114" />
+                <FieldRef Name="Category" width="104" />
+                <FieldRef Name="Severity" width="92" />
+              </ColumnWidth>
+              <ViewData />
+            </View>
+            <View Name="{A3AAB037-18BB-4443-9B87-4DEE96A0993A}" Type="HTML" DisplayName="Category" Url="{site}/Lists/M365MCPosts/Category.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="category" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="body" />
+                <FieldRef Name="services" />
+                <FieldRef Name="details" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="viewPoint" />
+              </ViewFields>
+              <RowLimit>500</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter>{"kanbanProps":{"hideSelection":false,"formatter":{"elmType":"div","attributes":{"class":"sp-card-container sp-card-container-noPadding"},"children":[{"elmType":"div","attributes":{"class":"ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer sp-card-subContainer-borderRadius"},"children":[{"elmType":"div","children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!Title.DisplayName]"},{"elmType":"p","attributes":{"title":"[$Title]","class":"ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent","role":"heading","aria-level":"3"},"txtContent":"=if ([$Title] == '', '–', [$Title])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$MCId] == '', 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!MCId.DisplayName]"},{"elmType":"p","attributes":{"title":"[$MCId]","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$MCId] == '', '–', [$MCId])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$actionRequiredByDateTime.displayValue] == '','none', ''"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!actionRequiredByDateTime.DisplayName]"},{"elmType":"p","attributes":{"title":"=if ([$actionRequiredByDateTime.displayValue] == '', '–', [$actionRequiredByDateTime.displayValue])","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$actionRequiredByDateTime.displayValue] == '', '–', [$actionRequiredByDateTime.displayValue])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$severity] == '', 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!severity.DisplayName]"},{"elmType":"div","attributes":{"class":"sp-card-content sp-card-formatterRef"},"children":[{"columnFormatterReference":"[$severity]"}]}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$services] == '', 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!services.DisplayName]"},{"elmType":"p","attributes":{"title":"[$services]","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$services] == '', '–', [$services])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$isMajorChange.displayValue] == '','none', ''"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!isMajorChange.DisplayName]"},{"elmType":"div","attributes":{"class":"sp-card-content sp-card-formatterRef"},"children":[{"columnFormatterReference":"[$isMajorChange]"}]}],"attributes":{"class":"sp-card-displayColumnContainer"}}]}],"templateId":"KanbanCardDesigner100"},"designerConfig":[1,0,"LinkTitle",0,"MCId",0,"actionRequiredByDateTime",0,"severity",0,"services",0,"isMajorChange"]}}</CustomFormatter>
+              <ViewType2>KANBAN</ViewType2>
+              <ViewData>
+                <FieldRef Name="category" Type="KanbanPivotColumn" />
+              </ViewData>
+            </View>
+            <View Name="{6C66BD16-5C15-456A-9EF3-5A1A0781FBF5}" Type="HTML" DisplayName="Review Status" Url="{site}/Lists/M365MCPosts/Review Status.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="services" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="category" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="body" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="details" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">500</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter>{"kanbanProps":{"hideSelection":false,"formatter":{"elmType":"div","attributes":{"class":"sp-card-container sp-card-container-noPadding"},"children":[{"elmType":"div","attributes":{"class":"ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer sp-card-subContainer-borderRadius"},"children":[{"elmType":"div","style":{"display":"=if(length([$Reviewer]) == 0, 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!Reviewer.DisplayName]"},{"elmType":"div","style":{"display":"flex"},"children":[{"elmType":"p","attributes":{"class":"sp-card-userEmptyText"},"txtContent":"=if(length([$Reviewer]) == 0, '–', '')"},{"forEach":"personIterator in [$Reviewer]","elmType":"a","attributes":{"class":"=if(loopIndex('personIterator') &gt;= 5, 'sp-card-userContainer', 'sp-card-userContainer sp-card-keyboard-focusable')"},"style":{"display":"=if(loopIndex('personIterator') &gt;= 5, 'none', '')"},"children":[{"elmType":"img","defaultHoverField":"[$personIterator]","attributes":{"src":"=getUserImage([$personIterator.email], 'S')","title":"[$personIterator.title]","class":"sp-card-userThumbnail"},"style":{"display":"=if(length([$Reviewer]) &gt; 5 &amp;&amp; loopIndex('personIterator') &gt;= 4, 'none', '')"}},{"elmType":"div","attributes":{"class":"ms-bgColor-neutralLight ms-fontColor-neutralSecondary sp-card-userOthers"},"style":{"display":"=if(length([$Reviewer]) &gt; 5 &amp;&amp; loopIndex('personIterator') == 4, '', 'none')"},"customCardProps":{"formatter":{"elmType":"div","attributes":{"class":"sp-card-personCallout"},"children":[{"forEach":"personIterator in [$Reviewer]","elmType":"div","attributes":{"class":"sp-card-userContainer sp-card-userCustomCard"},"style":{"display":"=if(loopIndex('personIterator') &lt; 4, 'none', '')"},"children":[{"elmType":"img","defaultHoverField":"[$personIterator]","attributes":{"src":"=getUserImage([$personIterator.email], 'S')","title":"[$personIterator.title]","class":"sp-card-userThumbnail"}}]}]},"openOnEvent":"hover"},"children":[{"elmType":"span","txtContent":"='+' + toString(length([$Reviewer]) - (4))"}]}]},{"elmType":"div","attributes":{"class":"sp-card-userTitle"},"style":{"display":"=if(length([$Reviewer]) == 1, '', 'none')"},"defaultHoverField":"[$personIterator]","txtContent":"[$Reviewer.title]"}]}],"attributes":{"class":"sp-card-previewColumnContainer"}},{"elmType":"div","children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!Title.DisplayName]"},{"elmType":"p","attributes":{"title":"[$Title]","class":"ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent","role":"heading","aria-level":"3"},"txtContent":"=if ([$Title] == '', '–', [$Title])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$MCId] == '', 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!MCId.DisplayName]"},{"elmType":"p","attributes":{"title":"[$MCId]","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$MCId] == '', '–', [$MCId])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$services] == '', 'none', '')"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!services.DisplayName]"},{"elmType":"p","attributes":{"title":"[$services]","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$services] == '', '–', [$services])"}],"attributes":{"class":"sp-card-displayColumnContainer"}},{"elmType":"div","style":{"display":"=if ([$actionRequiredByDateTime.displayValue] == '','none', ''"},"children":[{"elmType":"p","attributes":{"class":"ms-fontColor-neutralSecondary sp-card-label sp-card-boldText"},"txtContent":"[!actionRequiredByDateTime.DisplayName]"},{"elmType":"p","attributes":{"title":"=if ([$actionRequiredByDateTime.displayValue] == '', '–', [$actionRequiredByDateTime.displayValue])","class":"ms-fontColor-neutralPrimary sp-card-content "},"txtContent":"=if ([$actionRequiredByDateTime.displayValue] == '', '–', [$actionRequiredByDateTime.displayValue])"}],"attributes":{"class":"sp-card-displayColumnContainer"}}]}],"templateId":"KanbanCardDesigner100"},"designerConfig":[1,1,"Reviewer",0,"LinkTitle",0,"MCId",0,"services",0,"actionRequiredByDateTime"]}}</CustomFormatter>
+              <ViewType2>KANBAN</ViewType2>
+              <ViewData>
+                <FieldRef Name="ReviewStatus" Type="KanbanPivotColumn" />
+              </ViewData>
+            </View>
+            <View Name="{BA373074-4924-4DFC-AE43-DBC78B3DDFE8}" Type="HTML" DisplayName="Severity" Url="{site}/Lists/M365MCPosts/Severity.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="severity" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="services" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="category" />
+                <FieldRef Name="body" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="details" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="Created" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">500</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewType2>KANBAN</ViewType2>
+              <ViewData>
+                <FieldRef Name="severity" Type="KanbanPivotColumn" />
+              </ViewData>
+            </View>
+            <View Name="{40950C1C-1705-45E3-BBC8-A8A5E5D606E6}" Type="HTML" DisplayName="Teams" Url="{site}/Lists/M365MCPosts/Teams.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq id="services">
+                    <FieldRef Name="services" />
+                    <Value Type="MultiChoice">Microsoft Teams</Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="MCId" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{1E808040-F485-4D12-ABDB-C68555986E4A}" Type="HTML" DisplayName="SharePoint" Url="{site}/Lists/M365MCPosts/SharePoint.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <Or id="services">
+                    <Eq>
+                      <FieldRef Name="services" />
+                      <Value Type="MultiChoice">SharePoint Online</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="services" />
+                      <Value Type="MultiChoice">OneDrive for Business</Value>
+                    </Eq>
+                  </Or>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="MCId" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{5B5BBEF8-AB01-4302-AAA3-5E7932DCEC3C}" Type="HTML" DisplayName="Exchange" Url="{site}/Lists/M365MCPosts/Exchange.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="services" />
+                    <Value Type="MultiChoice">Exchange Online</Value>
+                  </Eq>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="Modified" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="MCId" />
+                <FieldRef Name="ID" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{4BC9547E-6EB8-433A-96B7-D25667A926D0}" Type="HTML" DisplayName="Power Platform" Url="{site}/Lists/M365MCPosts/PowerPlatform.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" Ascending="FALSE" />
+                </OrderBy>
+                <Where>
+                  <Or>
+                    <Or>
+                      <Eq>
+                        <FieldRef Name="services" />
+                        <Value Type="Text">Power BI</Value>
+                      </Eq>
+                      <Eq>
+                        <FieldRef Name="services" />
+                        <Value Type="Text">Power Apps</Value>
+                      </Eq>
+                    </Or>
+                    <Eq>
+                      <FieldRef Name="services" />
+                      <Value Type="Text">Microsoft Power Automate</Value>
+                    </Eq>
+                  </Or>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{906CE5FC-36D0-4A03-B8F8-39A5E38E9E5B}" Type="HTML" DisplayName="Identity" Url="{site}/Lists/M365MCPosts/Identity.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <Or>
+                    <Eq>
+                      <FieldRef Name="services" />
+                      <Value Type="MultiChoice">Microsoft Entra</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="services" />
+                      <Value Type="MultiChoice">Identity Service</Value>
+                    </Eq>
+                  </Or>
+                </Where>
+                <OrderBy>
+                  <FieldRef Name="ID" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="ID" />
+                <FieldRef Name="MCId" />
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="RoadMapIds" />
+                <FieldRef Name="category" />
+                <FieldRef Name="services" />
+                <FieldRef Name="severity" />
+                <FieldRef Name="isMajorChange" />
+                <FieldRef Name="Platforms" />
+                <FieldRef Name="Summary" />
+                <FieldRef Name="body" />
+                <FieldRef Name="ExternalLink" />
+                <FieldRef Name="viewPoint" />
+                <FieldRef Name="tags" />
+                <FieldRef Name="startDateTime" />
+                <FieldRef Name="endDateTime" />
+                <FieldRef Name="lastModifiedDateTime" />
+                <FieldRef Name="actionRequiredByDateTime" />
+                <FieldRef Name="Reviewer" />
+                <FieldRef Name="ReviewStatus" />
+                <FieldRef Name="ReviewNotes" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="DateTime" Name="actionRequiredByDateTime" DisplayName="Action Required By DateTime" ID="{1849342d-ce6d-4536-a0b3-cc8a6be817f4}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="actionRequiredByDateTime" ColName="datetime1" RowOrdinal="0" />
+            <Field AppendOnly="TRUE" ClientSideComponentId="00000000-0000-0000-0000-000000000000" DisplayName="Body" Format="Dropdown" IsolateStyles="FALSE" Name="body" RichText="TRUE" RichTextMode="Compatible" Title="Body" Type="Note" ID="{37fccffa-192d-41b3-8bb6-a0a8bf752a79}" Version="5" StaticName="body" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="ntext2" RowOrdinal="0" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RestrictedMode="TRUE" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$category]&quot;,&quot;preventOrFixIssue&quot;]},&quot;sp-css-backgroundColor-BgRed sp-css-borderColor-WhiteFont sp-css-color-WhiteFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$category]&quot;,&quot;planForChange&quot;]},&quot;sp-css-backgroundColor-BgOrange sp-css-borderColor-WhiteFont sp-css-color-WhiteFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$category]&quot;,&quot;stayInformed&quot;]},&quot;sp-css-backgroundColor-BgCyan sp-css-borderColor-CyanFont sp-css-color-CyanFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$category]&quot;,&quot;unknownFutureValue&quot;]},&quot;sp-css-backgroundColor-BgLightGray sp-css-borderColor-LightGrayFont sp-css-color-LightGrayFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$category]&quot;,&quot;&quot;]},&quot;&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}},&quot;txtContent&quot;:&quot;[$category]&quot;}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Category" FillInChoice="TRUE" Format="Dropdown" Name="category" Title="Category" Type="Choice" ID="{f5d02335-6097-482a-8667-bfce5dad9e88}" Version="7" StaticName="category" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="nvarchar4" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>preventOrFixIssue</CHOICE>
+                <CHOICE>planForChange</CHOICE>
+                <CHOICE>stayInformed</CHOICE>
+                <CHOICE>unknownFutureValue</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Note" Name="details" DisplayName="Details" ID="{cc6116c5-8261-4fab-b266-26b202afe5bb}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="details" ColName="ntext3" RowOrdinal="0" />
+            <Field Type="DateTime" Name="endDateTime" DisplayName="End DateTime" ID="{c8b6c75b-0f7c-4ddf-8318-56f9ee177011}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="endDateTime" ColName="datetime2" RowOrdinal="0" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;0 2px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;&lt;=&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;Date()&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;toDateString()&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;Date()&quot;,&quot;operands&quot;:[&quot;[$endDateTime]&quot;]}]}]},{&quot;operator&quot;:&quot;Date()&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;toDateString()&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;Date()&quot;,&quot;operands&quot;:[&quot;@now&quot;]}]}]}]},&quot;sp-css-backgroundColor-BgCoral sp-css-borderColor-CoralFont sp-field-fontSizeSmall sp-css-color-CoralFont&quot;,&quot;&quot;]}},&quot;txtContent&quot;:&quot;[$endDateTime.displayValue]&quot;,&quot;templateId&quot;:&quot;ConditionalColumn&quot;}" Version="1" />
+            <Field Type="Boolean" Name="isMajorChange" DisplayName="Is Major Change" ID="{dfa36320-423c-427a-b272-76f154a03532}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="isMajorChange" ColName="bit1" RowOrdinal="0" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;0 2px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,true]},&quot;sp-css-backgroundColor-BgCoral sp-css-borderColor-CoralFont sp-css-color-CoralFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,false]},&quot;sp-css-backgroundColor-BgMintGreen sp-css-borderColor-MintGreenFont sp-css-color-MintGreenFont&quot;,&quot;&quot;]}]}},&quot;txtContent&quot;:&quot;@currentField.displayValue&quot;,&quot;templateId&quot;:&quot;BgColorBoolean&quot;}" EnforceUniqueValues="FALSE" Indexed="FALSE" Version="6">
+              <Default>0</Default>
+            </Field>
+            <Field Type="DateTime" Name="lastModifiedDateTime" DisplayName="Last Modified DateTime" ID="{f9b14db5-26ef-4656-8397-377c22f4a32d}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="lastModifiedDateTime" ColName="datetime3" RowOrdinal="0" />
+            <Field Name="services" FromBaseType="FALSE" Type="MultiChoice" DisplayName="Services" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" FillInChoice="TRUE" ID="{9541b323-5df8-42c4-b0e6-2608ac8e9dc2}" Version="4" StaticName="services" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="ntext4" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>SharePoint Online</CHOICE>
+                <CHOICE>Power BI</CHOICE>
+                <CHOICE>OneDrive for Business</CHOICE>
+                <CHOICE>Microsoft Teams</CHOICE>
+                <CHOICE>Microsoft Stream</CHOICE>
+                <CHOICE>Microsoft 365 suite</CHOICE>
+                <CHOICE>Microsoft Forms</CHOICE>
+                <CHOICE>Yammer Enterprise</CHOICE>
+                <CHOICE>Planner</CHOICE>
+                <CHOICE>Exchange Online</CHOICE>
+                <CHOICE>Microsoft 365 Defender</CHOICE>
+                <CHOICE>Microsoft 365 Apps</CHOICE>
+                <CHOICE>Microsoft Viva</CHOICE>
+                <CHOICE>Identity Service</CHOICE>
+                <CHOICE>Office for the web</CHOICE>
+                <CHOICE>Project for the web</CHOICE>
+                <CHOICE>Windows</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$severity]&quot;,&quot;normal&quot;]},&quot;sp-css-backgroundColor-BgTeal sp-css-borderColor-WhiteFont sp-css-color-WhiteFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$severity]&quot;,&quot;high&quot;]},&quot;sp-css-backgroundColor-BgOrange sp-css-borderColor-WhiteFont sp-css-color-WhiteFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$severity]&quot;,&quot;critical&quot;]},&quot;sp-css-backgroundColor-BgRed sp-css-borderColor-WhiteFont sp-css-color-WhiteFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$severity]&quot;,&quot;unknownFutureValue&quot;]},&quot;sp-css-backgroundColor-BgLightGray sp-css-borderColor-LightGrayFont sp-css-color-LightGrayFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;[$severity]&quot;,&quot;&quot;]},&quot;&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}},&quot;txtContent&quot;:&quot;[$severity]&quot;}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" DisplayName="Severity" FillInChoice="TRUE" Format="Dropdown" Name="severity" Title="Severity" Type="Choice" ID="{4fb3062e-4c0c-4fa7-9982-30e0e106ce01}" Version="11" StaticName="severity" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="nvarchar5" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>normal</CHOICE>
+                <CHOICE>high</CHOICE>
+                <CHOICE>critical</CHOICE>
+                <CHOICE>unknownFutureValue</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="DateTime" Name="startDateTime" DisplayName="Start DateTime" ID="{48d38524-805b-4ccb-b35c-d58d9740cd6b}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="startDateTime" ColName="datetime4" RowOrdinal="0" />
+            <Field Name="tags" FromBaseType="FALSE" Type="MultiChoice" DisplayName="Tags" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" FillInChoice="TRUE" ID="{66bbdf46-2032-468e-9988-6e3a849584f7}" Version="3" StaticName="tags" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="ntext5" RowOrdinal="0" CustomFormatter="">
+              <CHOICES>
+                <CHOICE>Updated message</CHOICE>
+                <CHOICE>New feature</CHOICE>
+                <CHOICE>Admin impact</CHOICE>
+                <CHOICE>User impact</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Note" Name="viewPoint" DisplayName="ViewPoint" ID="{d32bffcc-1a7b-4898-af83-4853eca7a012}" Group="" Required="FALSE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="viewPoint" ColName="ntext6" RowOrdinal="0" />
+            <Field Type="Text" Name="MCId" DisplayName="MC ID" ID="{5a6b3fdf-9a25-46ac-ad5e-c6a8319a348f}" Group="" Required="TRUE" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="MCId" ColName="nvarchar6" RowOrdinal="0" CustomFormatter="" EnforceUniqueValues="TRUE" Indexed="TRUE" MaxLength="255" Version="8" />
+            <Field DisplayName="Reviewer" Format="Dropdown" IsModern="TRUE" List="UserInfo" Mult="TRUE" Name="Reviewer" Title="Reviewer" Type="UserMulti" UserDisplayOptions="NamePhoto" UserSelectionMode="1" UserSelectionScope="0" ID="{c28cd3ed-cb78-4d65-978c-69b25a2d6adc}" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="Reviewer" ColName="int1" RowOrdinal="0" />
+            <Field CustomFormatter="{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;flex-wrap&quot;:&quot;wrap&quot;,&quot;display&quot;:&quot;flex&quot;},&quot;children&quot;:[{&quot;elmType&quot;:&quot;div&quot;,&quot;style&quot;:{&quot;box-sizing&quot;:&quot;border-box&quot;,&quot;padding&quot;:&quot;4px 8px 5px 8px&quot;,&quot;overflow&quot;:&quot;hidden&quot;,&quot;text-overflow&quot;:&quot;ellipsis&quot;,&quot;display&quot;:&quot;flex&quot;,&quot;border-radius&quot;:&quot;16px&quot;,&quot;height&quot;:&quot;24px&quot;,&quot;align-items&quot;:&quot;center&quot;,&quot;white-space&quot;:&quot;nowrap&quot;,&quot;margin&quot;:&quot;4px 4px 4px 4px&quot;},&quot;attributes&quot;:{&quot;class&quot;:{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Review In Progress&quot;]},&quot;sp-css-backgroundColor-BgCornflowerBlue sp-field-fontSizeSmall sp-css-color-CornflowerBlueFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Completed&quot;]},&quot;sp-css-backgroundColor-BgMintGreen sp-field-fontSizeSmall sp-css-color-MintGreenFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Multiple Team Review In Progress&quot;]},&quot;sp-css-backgroundColor-BgGold sp-field-fontSizeSmall sp-css-color-GoldFont&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;&quot;]},&quot;&quot;,{&quot;operator&quot;:&quot;:&quot;,&quot;operands&quot;:[{&quot;operator&quot;:&quot;==&quot;,&quot;operands&quot;:[&quot;@currentField&quot;,&quot;Needs Further Clarification In Progress&quot;]},&quot;sp-css-backgroundColor-BgLightGray sp-css-borderColor-LightGrayFont sp-field-fontSizeSmall sp-css-color-LightGrayFont&quot;,&quot;sp-field-borderAllRegular sp-field-borderAllSolid sp-css-borderColor-neutralSecondary&quot;]}]}]}]}]}},&quot;txtContent&quot;:&quot;@currentField&quot;}],&quot;templateId&quot;:&quot;BgColorChoicePill&quot;}" Description="Review Status" DisplayName="Review Status" FillInChoice="FALSE" Format="Dropdown" IsModern="TRUE" Name="ReviewStatus" Title="Review Status" Type="Choice" ID="{e87c1265-c57b-4f3a-8376-040309bc7db6}" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="ReviewStatus" ColName="nvarchar7" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>Review In Progress</CHOICE>
+                <CHOICE>Completed</CHOICE>
+                <CHOICE>Multiple Team Review In Progress</CHOICE>
+                <CHOICE>Needs Further Clarification In Progress</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field AppendOnly="TRUE" DisplayName="Review Notes" Format="Dropdown" IsModern="TRUE" IsolateStyles="TRUE" Name="ReviewNotes" RichText="TRUE" RichTextMode="FullHtml" Title="Review Notes" Type="Note" ID="{568f2a33-b70b-46ca-be82-0d363a4183b0}" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" StaticName="ReviewNotes" ColName="ntext7" RowOrdinal="0" />
+            <Field Name="RoadMapIds" FromBaseType="FALSE" Type="MultiChoice" DisplayName="RoadMapIds" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" FillInChoice="TRUE" ID="{59170aed-e423-41a5-8aa1-d14e7a2406f3}" Version="3" StaticName="RoadMapIds" SourceID="{a5be1d28-0ba5-4ec3-8bbd-f70021f1ece8}" ColName="ntext8" RowOrdinal="0" CustomFormatter="{&quot;$schema&quot;:&quot;https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json&quot;,&quot;elmType&quot;:&quot;a&quot;,&quot;txtContent&quot;:&quot;@currentField&quot;,&quot;attributes&quot;:{&quot;target&quot;:&quot;_blank&quot;,&quot;href&quot;:&quot;='https://www.microsoft.com/en-us/microsoft-365/roadmap?featureid=' + @currentField&quot;}}">
+              <Default>--</Default>
+              <CHOICES>
+                <CHOICE>--</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Name="Platforms" FromBaseType="FALSE" Type="MultiChoice" DisplayName="Platforms" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" FillInChoice="TRUE" ID="{a597dc62-a22d-4d38-8f89-a8e9efd863b7}" Version="1" StaticName="Platforms" SourceID="{6a30c875-a974-4190-a687-c8e5db783e6c}" ColName="ntext10" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>Desktop</CHOICE>
+                <CHOICE>Mac</CHOICE>
+                <CHOICE>Web</CHOICE>
+                <CHOICE>Others</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Text" DisplayName="ExternalLink" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{e82d452c-ca29-4a35-a8b5-76249211be37}" SourceID="{6a30c875-a974-4190-a687-c8e5db783e6c}" StaticName="ExternalLink" Name="ExternalLink" ColName="nvarchar12" RowOrdinal="0" />
+            <Field Name="Summary" FromBaseType="FALSE" Type="Note" DisplayName="Summary" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" NumLines="6" RichText="FALSE" RichTextMode="Compatible" IsolateStyles="FALSE" Sortable="FALSE" ID="{fd202b8b-96c0-4b50-89d3-4d1392e7fa8d}" Version="2" StaticName="Summary" SourceID="{6a30c875-a974-4190-a687-c8e5db783e6c}" ColName="ntext9" RowOrdinal="0" CustomFormatter="" RestrictedMode="TRUE" AppendOnly="FALSE" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" DisplayName="Title" />
+          </pnp:FieldRefs>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://eastus0-0.pushnp.svc.ms/notifications?token=926f5d38-ef65-4dab-9329-49430fef7080%2Fb!ZwqMDDmaiE26MMieDGQPsWycaRJ26_NPpszZ-EludlipsM37-e4qSqMdLFR66tYB" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
