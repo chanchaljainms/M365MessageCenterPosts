@@ -49,7 +49,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 3.  Once the app is registered grant the following API permissions
     
     *   Microsoft Graph – Application - ServiceMessage.Read.All
-        
+![AZ AD App](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/AzureADAppReg.png)
 4.  Generate a Client Secret for the app and keep it safe. The value will be used in the flow.
     
 5.  Configure other properties as required by your Organizational standards but is not needed for the current solution
@@ -65,11 +65,15 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
         
 3.  Upload the list template M365MessageCenterPosts.stp file which is part of the solution. Download Link
     
-4.  Once the upload is complete, we will create a new list based of the template.
-    
-5.  Navigate to the relative URL for the site /\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
+4.  Once the upload is complete, we will create a new list based of the template. Navigate to the relative URL for the site /\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
     
     *   Ex: https://XX.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
+![SP List Create](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/SPListCreate.png)
+5.	Enter the Name of the list as "M365MCPosts"
+6.	Enter a meaningful Description.
+7.	Click on "Create"
+8.	Once the list is created, it will navigate to the newly created list page
+![SP List Created](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/SPList.png)
 
 
 ## Flow Setup
@@ -87,7 +91,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 5.  On the Import Package page, Click on the "Upload" button and select the **M365-MessageCenterPosts-ImportToSPV3\_20250223053108.zip** file (part of the solution) from the file explorer (navigate to the folder where you have the file saved).
     
 6.  Once the package has uploaded, and the screen to update the information comes up, update the "Name" and the "Connections".
-    
+    ![Flow Import](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowImportS2.png)
 7.  Click on "Import".
     
 8.  After the flow has imported successfully, navigate to "My Flows" page and find the flow with the name provided. Click on the Edit button (pencil icon).
@@ -114,8 +118,9 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     *   Example if you plan to run the flow every week once, set it to 7 so it will bring any posts generated in the last 7 day.
         
 *   If required, update the Body of the Email to be sent on Error by updating the actions as shown in the screenshots below.
-    
-
+  
+![](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowUpdateVars.png)  
+![](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowError.png)
 11.  Once the values have been updated, "Save" the flow and "Test" run it.
     
 12.  If everything was setup correctly, including the Azure AD app, the SPO site, the Message Center Posts list, the flow should run without error.
