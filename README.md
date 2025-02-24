@@ -133,3 +133,8 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 14.  Once the Test run is successful, do not forget to "Turn On" the flow.
 
+### Some screenshot(s) of the list after the flow has run and data is available.
+
+
+![SP List Screenshot](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/MC%20List%20Screenshot.png)
+![SP List Screenshot](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/MC%20List%20Screenshot%202.png)
