@@ -69,7 +69,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 5.  Navigate to the relative URL for the site /\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
     
-    *   Ex: https://m365x25136000.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
+    *   Ex: https://XX.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
 
 
 ## Flow Setup
