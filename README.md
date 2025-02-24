@@ -33,7 +33,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 
 # Setup Instructions
-```markdown
+
 ## Azure AD Setup
 
 1.  Register an App following the steps at [https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
@@ -52,5 +52,23 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
         
 4.  Generate a Client Secret for the app and keep it safe. The value will be used in the flow.
     
-5.  Configure other properties as required by your Organizational standards but is not needed for the current solution.
+5.  Configure other properties as required by your Organizational standards but is not needed for the current solution
+
+
+## SharePoint Setup
+
+1.  Create a new Teams site or use an existing modern Teams site.
+    
+2.  Navigate to the relative URL for the site /\_catalogs/lt/
+    
+    *   EX: [https://XXX.sharepoint.com/sites/M365MessageCenter/\_catalogs/lt/](https://XXX.sharepoint.com/sites/M365MessageCenter/_catalogs/lt/)
+        
+3.  Upload the list template M365MessageCenterPosts.stp file which is part of the solution. Download Link
+    
+4.  Once the upload is complete, we will create a new list based of the template.
+    
+5.  Navigate to the relative URL for the site /\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
+    
+    *   Ex: [https://m365x25136000.sharepoint.com/sites/M365Messagecenterposts/\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp](https://m365x25136000.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp)
 ```
+
