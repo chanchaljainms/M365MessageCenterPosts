@@ -119,8 +119,9 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
         
 *   If required, update the Body of the Email to be sent on Error by updating the actions as shown in the screenshots below.
   
-![](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowUpdateVars.png)  
-![](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowError.png)
+![Update Flow Vars](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowUpdateVars.png)  
+![Update Error Email](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowError.png)
+
 11.  Once the values have been updated, "Save" the flow and "Test" run it.
     
 12.  If everything was setup correctly, including the Azure AD app, the SPO site, the Message Center Posts list, the flow should run without error.
