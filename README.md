@@ -72,3 +72,52 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     *   Ex: https://m365x25136000.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
 
 
+## Flow Setup
+1.  Navigate to [https://make.powerautomate.com/](https://make.powerautomate.com/)
+    
+2.  Once signed-in, select the correct Environment where you want to deploy the flow.
+    
+    *   **IMPORTANT:** The flow uses Premium Connector, so make sure the license setup etc. is done to ensure the flow will execute.
+        
+3.  Once the correct environment is selected, click on "My Flows" on the left navigation.
+    
+4.  When the "My Flows" page loads, click on "Import" button on the top toolbar and Select "Import Package (legacy)".
+    
+5.  On the Import Package page, Click on the "Upload" button and select the **M365-MessageCenterPosts-ImportToSPV3\_20250223053108.zip** file (part of the solution) from the file explorer (navigate to the folder where you have the file saved).
+    
+6.  Once the package has uploaded, and the screen to update the information comes up, update the "Name" and the "Connections".
+    
+7.  Click on "Import".
+    
+8.  After the flow has imported successfully, navigate to "My Flows" page and find the flow with the name provided. Click on the Edit button (pencil icon).
+    
+9.  Once in the Flow Designer page, update the "Recurrence" of the flow.
+    
+10.  Update the values for the variables that start with "MODIFY" with the correct values
+    
+
+*   TenantId (Value from the Azure AD registered application)
+    
+*   ClientId  (Value from the Azure AD registered application)
+    
+*   Secret (Value from the Azure AD registered application)
+    
+*   SiteURL (URL of the SharePoint site that was created)
+    
+*   M365PostsListTitle (Title of the List that was created)
+    
+*   EmailToBeNotified (Email Address of the mailbox to notify of errors in flow)
+    
+*   NumberofDaysPosts (Default Value is 7 – Increase or decrease depending on how often you want the flow to run and how many past days post you want it to process).
+    
+    *   Example if you plan to run the flow every week once, set it to 7 so it will bring any posts generated in the last 7 day.
+        
+*   If required, update the Body of the Email to be sent on Error by updating the actions as shown in the screenshots below.
+    
+
+11.  Once the values have been updated, "Save" the flow and "Test" run it.
+    
+12.  If everything was setup correctly, including the Azure AD app, the SPO site, the Message Center Posts list, the flow should run without error.
+    
+13.  Once the Test run is successful, do not forget to "Turn On" the flow.
+
