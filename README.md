@@ -33,3 +33,18 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 
 # Setup Instructions
+## Azure AD Setup
+
+1.  Register an App following the steps at [https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
+    
+2.  Use the following values during App registration
+    
+    *   Name – A name that suits your organization standards (example - M365 Message Center Power Automate)
+        
+    *   Supported Account Types - Accounts in this organizational directory only
+        
+    *   Redirect URI - **N\\A**
+        
+3.  Once the app is registered grant the following API permissions
+    
+    *   Microsoft Graph – Application - ServiceMessage.Read.All
