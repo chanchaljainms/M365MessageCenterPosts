@@ -1,4 +1,4 @@
-# Microsoft 365 - Message Center Posts Automation
+Microsoft 365 - Message Center Posts Automation
 
 ## Summary
 
@@ -29,3 +29,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 *   Account that has Power Automate license for Premium Connector
     
+*   New or Existing SharePoint site with Site Owner permissions
+    
+
+# Setup Instructions
