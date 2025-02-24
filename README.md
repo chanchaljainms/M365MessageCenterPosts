@@ -50,7 +50,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
     *   Microsoft Graph – Application - ServiceMessage.Read.All
 
-
+![AZ AD App Permissions](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/AzureADAppReg.png)
 
 4.  Generate a Client Secret for the app and keep it safe. The value will be used in the flow.
     
