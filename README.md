@@ -123,8 +123,11 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 ![Update Error Email](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowError.png)
 
 11.  Once the values have been updated, "Save" the flow and "Test" run it.
+  
+
+## The Solution is provided as-is. Please test it in a Non-Prod environment before deploying it to Production.
     
-12.  If everything was setup correctly, including the Azure AD app, the SPO site, the Message Center Posts list, the flow should run without error.
+13.  If everything was setup correctly, including the Azure AD app, the SPO site, the Message Center Posts list, the flow should run without error.
     
-13.  Once the Test run is successful, do not forget to "Turn On" the flow.
+14.  Once the Test run is successful, do not forget to "Turn On" the flow.
 
