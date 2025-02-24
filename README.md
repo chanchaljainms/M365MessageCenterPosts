@@ -78,6 +78,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 2.  Once signed-in, select the correct Environment where you want to deploy the flow.
     
     *   **IMPORTANT:** The flow uses Premium Connector, so make sure the license setup etc. is done to ensure the flow will execute.
+![Flow Environment](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/FlowEnv.png)
         
 3.  Once the correct environment is selected, click on "My Flows" on the left navigation.
     
