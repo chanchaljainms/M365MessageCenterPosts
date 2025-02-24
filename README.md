@@ -33,6 +33,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 
 # Setup Instructions
+```markdown
 ## Azure AD Setup
 
 1.  Register an App following the steps at [https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app)
@@ -48,3 +49,8 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 3.  Once the app is registered grant the following API permissions
     
     *   Microsoft Graph – Application - ServiceMessage.Read.All
+        
+4.  Generate a Client Secret for the app and keep it safe. The value will be used in the flow.
+    
+5.  Configure other properties as required by your Organizational standards but is not needed for the current solution.
+```
