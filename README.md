@@ -31,7 +31,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 *   New or Existing SharePoint site with Site Owner permissions
 
-*   Custom Scripting enabled on the site for setup
+*   Custom Scripting enabled on the site for setup (One time and only required while doing the SharePoint Setup)
     
 
 # Setup Instructions
