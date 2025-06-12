@@ -71,7 +71,7 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
     
 4.  Once the upload is complete, we will create a new list based of the template. Navigate to the relative URL for the site /\_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
     
-    *   Ex: https://XX.sharepoint.com/sites/M365Messagecenterposts/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
+    *   Ex: https://XX.sharepoint.com/sites/M365MessageCenter/_layouts/15/new.aspx?CustomTemplate=M365MessageCenterPosts.stp
 ![SP List Create](https://github.com/chanchaljainms/M365MessageCenterPosts/blob/main/Images/SPListCreate.png)
 5.	Enter the Name of the list as "M365MCPosts"
 6.	Enter a meaningful Description.
