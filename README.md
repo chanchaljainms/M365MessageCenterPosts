@@ -61,8 +61,8 @@ Customers\\User can extend it to build powerful solutions on top of the SharePoi
 
 ## SharePoint Setup
 
-1.  Create a new Teams site or use an existing modern Teams site. Also ensure that Custom Scripting is enabled for the site before the next steps.
-    
+1.  Create a new Teams site or use an existing modern Teams site. 
+**IMPORTANT:** Ensure that Custom Scripting is enabled for the site to be used, before following the next steps.    
 2.  Navigate to the relative URL for the site /\_catalogs/lt/
     
     *   EX: https://XXX.sharepoint.com/sites/M365MessageCenter/\_catalogs/lt/
